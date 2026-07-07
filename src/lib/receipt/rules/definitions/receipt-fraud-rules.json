@@ -1,0 +1,65 @@
+[
+  {
+    "id": "receipt.fraud.payment.method",
+    "name": "Payment Method Fraud Indicator",
+    "description": "Flags missing or unusual payment methods as potential fraud indicator",
+    "documentType": "receipt",
+    "category": "fraud",
+    "severity": "warning",
+    "enabled": true,
+    "condition": {
+      "field": "paymentMethod",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "paymentMethod",
+      "expected": "A valid payment method (Cash, QRIS, Card, etc.)",
+      "recommendation": "Investigate receipts with missing payment methods."
+    },
+    "message": "Payment method not detected — potential fraud indicator",
+    "recommendation": "Investigate receipts with missing payment methods."
+  },
+  {
+    "id": "receipt.fraud.items.empty",
+    "name": "Empty Items Fraud Indicator",
+    "description": "Flags receipts with no line items as suspicious",
+    "documentType": "receipt",
+    "category": "fraud",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "items",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "items",
+      "expected": "At least one line item present",
+      "recommendation": "Investigate receipts with no items — possible manipulation."
+    },
+    "message": "No items detected — receipt may be fraudulent",
+    "recommendation": "Investigate receipts with no items — possible manipulation."
+  },
+  {
+    "id": "receipt.fraud.store.name.missing",
+    "name": "Missing Store Name Fraud Indicator",
+    "description": "Flags receipts with no store name as potentially fraudulent",
+    "documentType": "receipt",
+    "category": "fraud",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "storeName",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "storeName",
+      "expected": "Store name present",
+      "recommendation": "Manually verify the receipt origin."
+    },
+    "message": "Store name missing — possible fraudulent receipt",
+    "recommendation": "Manually verify the receipt origin."
+  }
+]

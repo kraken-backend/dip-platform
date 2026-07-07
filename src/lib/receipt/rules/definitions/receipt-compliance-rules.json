@@ -1,0 +1,65 @@
+[
+  {
+    "id": "receipt.compliance.tax.ppn",
+    "name": "PPN 11% Tax Compliance",
+    "description": "Verifies that PPN 11% VAT exists for taxable transactions",
+    "documentType": "receipt",
+    "category": "compliance",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "tax",
+      "operator": "greaterThan",
+      "value": 0
+    },
+    "evidence": {
+      "sourceField": "tax",
+      "expected": "PPN 11% (> 0)",
+      "recommendation": "Verify the merchant's tax compliance."
+    },
+    "message": "PPN (11% VAT) is missing",
+    "recommendation": "Verify the merchant's tax compliance."
+  },
+  {
+    "id": "receipt.compliance.date.range",
+    "name": "Date Range Compliance",
+    "description": "Verifies the receipt date is within a valid range",
+    "documentType": "receipt",
+    "category": "compliance",
+    "severity": "warning",
+    "enabled": true,
+    "condition": {
+      "field": "date",
+      "operator": "matchesRegex",
+      "value": "^\\d{2}/\\d{2}/\\d{4}$"
+    },
+    "evidence": {
+      "sourceField": "date",
+      "expected": "DD/MM/YYYY date format",
+      "recommendation": "Verify the receipt date."
+    },
+    "message": "Receipt date format is invalid",
+    "recommendation": "Verify the receipt date."
+  },
+  {
+    "id": "receipt.compliance.merchant.registered",
+    "name": "Merchant Registration Compliance",
+    "description": "Verifies the merchant is a registered entity",
+    "documentType": "receipt",
+    "category": "compliance",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "storeName",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "storeName",
+      "expected": "A registered merchant name",
+      "recommendation": "Verify merchant registration status."
+    },
+    "message": "Store name could not be validated against merchant registry",
+    "recommendation": "Verify merchant registration status."
+  }
+]

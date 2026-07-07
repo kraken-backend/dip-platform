@@ -1,0 +1,107 @@
+[
+  {
+    "id": "receipt.store.name.exists",
+    "name": "Store Name Detection",
+    "description": "Verifies that the store name was detected from the receipt",
+    "documentType": "receipt",
+    "category": "format",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "storeName",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "storeName",
+      "expected": "A valid store name",
+      "recommendation": "Ensure the receipt image clearly shows the merchant name."
+    },
+    "message": "Store name could not be detected from receipt",
+    "recommendation": "Ensure the receipt image clearly shows the merchant name."
+  },
+  {
+    "id": "receipt.date.format",
+    "name": "Receipt Date Format",
+    "description": "Validates that the receipt date follows DD/MM/YYYY format",
+    "documentType": "receipt",
+    "category": "format",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "date",
+      "operator": "matchesRegex",
+      "value": "^\\d{2}/\\d{2}/\\d{4}$"
+    },
+    "evidence": {
+      "sourceField": "date",
+      "expected": "DD/MM/YYYY format",
+      "recommendation": "Check the date field in the receipt."
+    },
+    "message": "Date format is invalid. Expected DD/MM/YYYY.",
+    "recommendation": "Check the date field in the receipt."
+  },
+  {
+    "id": "receipt.tax.ppn.exists",
+    "name": "PPN 11% VAT Verification",
+    "description": "Verifies PPN (11% VAT) is present for taxable transactions",
+    "documentType": "receipt",
+    "category": "compliance",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "tax",
+      "operator": "greaterThan",
+      "value": 0
+    },
+    "evidence": {
+      "sourceField": "tax",
+      "expected": "PPN 11% of taxable amount (> 0)",
+      "recommendation": "Indonesian tax regulation requires PPN 11% for taxable transactions."
+    },
+    "message": "PPN (11% VAT) is missing for a taxable transaction",
+    "recommendation": "Indonesian tax regulation requires PPN 11% for taxable transactions."
+  },
+  {
+    "id": "receipt.payment.method.exists",
+    "name": "Payment Method Detection",
+    "description": "Verifies that the payment method was detected",
+    "documentType": "receipt",
+    "category": "format",
+    "severity": "warning",
+    "enabled": true,
+    "condition": {
+      "field": "paymentMethod",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "paymentMethod",
+      "expected": "Cash, QRIS, Card, etc.",
+      "recommendation": "Payment method is useful for reconciliation."
+    },
+    "message": "Payment method not detected",
+    "recommendation": "Payment method is useful for reconciliation."
+  },
+  {
+    "id": "receipt.items.not.empty",
+    "name": "Items Present",
+    "description": "Verifies at least one item was detected on the receipt",
+    "documentType": "receipt",
+    "category": "format",
+    "severity": "error",
+    "enabled": true,
+    "condition": {
+      "field": "items",
+      "operator": "exists",
+      "value": true
+    },
+    "evidence": {
+      "sourceField": "items",
+      "expected": "At least one line item",
+      "recommendation": "Ensure the receipt image clearly shows the item list."
+    },
+    "message": "No items detected on receipt",
+    "recommendation": "Ensure the receipt image clearly shows the item list."
+  }
+]
