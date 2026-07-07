@@ -1,0 +1,23 @@
+{
+  "receiptId": "receipt03",
+  "groundTruth": {
+    "storeName": "Fashion Hub - Summarecon",
+    "storeAddress": "Unit 2F-12, Summarecon Mall, Jl. Boulevard Raya No. 1",
+    "storePhone": "(021) 4586-9012",
+    "date": "14/06/2026",
+    "time": "19:45",
+    "receiptNumber": "FH-2026-06-8871",
+    "items": [
+      { "name": "Kemeja Formal", "quantity": 1, "unitPrice": 175000, "totalPrice": 175000 },
+      { "name": "Celana Chino", "quantity": 1, "unitPrice": 220000, "totalPrice": 220000 },
+      { "name": "Kaos Polos", "quantity": 2, "unitPrice": 60000, "totalPrice": 120000 },
+      { "name": "Sepatu Formal", "quantity": 1, "unitPrice": 450000, "totalPrice": 450000 }
+    ],
+    "subtotal": 965000,
+    "tax": 95535,
+    "discount": 96500,
+    "total": 964035,
+    "paymentMethod": "Kartu Kredit BNI",
+    "cashier": "Sari W."
+  }
+}

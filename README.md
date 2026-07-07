@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Summarecon Document Intelligence Platform
+
+A Document Intelligence Platform POC built for Summarecon Mall, with Receipt Validation as the first use case.
+
+Built with Next.js 16.2.10, TypeScript, and TailwindCSS v4 (App Router).
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Four Processing Options
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **OCR Only** -- Extract text from receipt images
+2. **Standard OCR** -- Extract + validate receipt data
+3. **OCR Knowledge** -- Extract + validate + fraud detection
+4. **Full Platform** -- Extract + validate + fraud + analytics
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+- `src/lib/document/` -- Generic document intelligence platform layer
+- `src/lib/receipt/` -- Receipt-specific use case logic
+- `src/components/` -- React UI components
+- `src/app/` -- Pages and API routes
+- `docs/` -- Architecture and design documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Document | Description |
+|----------|-------------|
+| `docs/ARCHITECTURE.md` | System architecture, layers, and immutability rules |
+| `docs/PIPELINE.md` | Current receipt pipeline and target generic pipeline |
+| `docs/PROVIDER_STRATEGY.md` | OCR provider abstraction and future providers |
+| `docs/KNOWLEDGE_LAYER.md` | Entities, relationships, risk signals, audit evidence |
+| `docs/RULE_ENGINE_DIRECTION.md` | Future externalized rule engine direction |
+| `docs/DEMO_EXPERIENCE_FOUNDATION.md` | Demo experience blueprint and implementation plan |
+| `docs/FOLDER_STRUCTURE.md` | Folder ownership and responsibility |
+| `docs/EXECUTION_RULES.md` | Engineering report discipline and build/lint requirements |
+| `docs/ROADMAP.md` | Implementation phases and future task order |
+| `docs/DOCUMENT_INTELLIGENCE_ARCHITECTURE.md` | Document layer architecture deep-dive |
 
-## Deploy on Vercel
+## Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run lint
+```

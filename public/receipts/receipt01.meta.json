@@ -1,0 +1,11 @@
+{
+  "receiptId": "receipt01",
+  "title": "Food Court Lunch Receipt",
+  "description": "A typical lunch receipt from Summarecon Mall Food Court with member discount and QRIS payment.",
+  "category": "F&B",
+  "country": "Indonesia",
+  "currency": "IDR",
+  "scenario": "Normal transaction with member discount",
+  "risk": "low",
+  "tags": ["food-court", "qris", "member-discount", "lunch"]
+}

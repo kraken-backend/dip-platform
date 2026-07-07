@@ -1,0 +1,23 @@
+{
+  "receiptId": "receipt02",
+  "groundTruth": {
+    "storeName": "Electronic Pro - Summarecon",
+    "storeAddress": "LG.1 - Summarecon Mall, Jl. Boulevard Raya No. 1",
+    "storePhone": "(021) 4586-5678",
+    "date": "15/06/2026",
+    "time": "11:15",
+    "receiptNumber": "INV-2026-06-00892",
+    "items": [
+      { "name": "Wireless Keyboard", "quantity": 1, "unitPrice": 250000, "totalPrice": 250000 },
+      { "name": "Mouse Pad Gaming", "quantity": 1, "unitPrice": 85000, "totalPrice": 85000 },
+      { "name": "USB Cable 2m", "quantity": 2, "unitPrice": 15000, "totalPrice": 30000 },
+      { "name": "Headset Bluetooth", "quantity": 1, "unitPrice": 350000, "totalPrice": 350000 }
+    ],
+    "subtotal": 715000,
+    "tax": 78650,
+    "discount": 0,
+    "total": 793650,
+    "paymentMethod": "Kartu Debit BCA",
+    "cashier": "Budi H."
+  }
+}

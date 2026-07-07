@@ -1,0 +1,11 @@
+{
+  "receiptId": "receipt04",
+  "title": "Suspicious Cash Transaction",
+  "description": "A high-risk receipt with unregistered merchant, missing tax, unusual hours, and high-value cash payment.",
+  "category": "Suspicious",
+  "country": "Indonesia",
+  "currency": "IDR",
+  "scenario": "Suspicious transaction - high risk",
+  "risk": "high",
+  "tags": ["suspicious", "cash", "unregistered", "no-tax", "high-value"]
+}

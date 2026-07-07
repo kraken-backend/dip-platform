@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "description": "Summarecon Mall Receipt Dataset - Demo sample receipts for the Document Intelligence Platform",
+  "totalReceipts": 4,
+  "receipts": [
+    {
+      "id": "receipt01",
+      "title": "Food Court Lunch Receipt",
+      "description": "A typical lunch receipt from Summarecon Mall Food Court with member discount and QRIS payment.",
+      "imagePath": "/receipts/receipt01.jpg",
+      "groundTruthPath": "/receipts/receipt01.json",
+      "metadataPath": "/receipts/receipt01.meta.json",
+      "category": "F&B",
+      "country": "Indonesia",
+      "currency": "IDR",
+      "scenario": "Normal transaction with member discount",
+      "risk": "low"
+    },
+    {
+      "id": "receipt02",
+      "title": "Electronics Store Purchase",
+      "description": "A mid-value electronics purchase with debit card payment. Standard retail transaction.",
+      "imagePath": "/receipts/receipt02.jpg",
+      "groundTruthPath": "/receipts/receipt02.json",
+      "metadataPath": "/receipts/receipt02.meta.json",
+      "category": "Electronics",
+      "country": "Indonesia",
+      "currency": "IDR",
+      "scenario": "Standard retail purchase",
+      "risk": "low"
+    },
+    {
+      "id": "receipt03",
+      "title": "Fashion Weekend Shopping",
+      "description": "A high-value fashion purchase with weekend promotion discount and credit card installment.",
+      "imagePath": "/receipts/receipt03.png",
+      "groundTruthPath": "/receipts/receipt03.json",
+      "metadataPath": "/receipts/receipt03.meta.json",
+      "category": "Fashion",
+      "country": "Indonesia",
+      "currency": "IDR",
+      "scenario": "Weekend promotion with credit installment",
+      "risk": "low"
+    },
+    {
+      "id": "receipt04",
+      "title": "Suspicious Cash Transaction",
+      "description": "A high-risk receipt with unregistered merchant, missing tax, unusual hours, and high-value cash payment.",
+      "imagePath": "/receipts/receipt04.jpg",
+      "groundTruthPath": "/receipts/receipt04.json",
+      "metadataPath": "/receipts/receipt04.meta.json",
+      "category": "Suspicious",
+      "country": "Indonesia",
+      "currency": "IDR",
+      "scenario": "Suspicious transaction - high risk",
+      "risk": "high"
+    }
+  ]
+}

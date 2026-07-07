@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+AGENTS.md
+CLAUDE.md
 
 # testing
 /coverage
@@ -23,6 +25,8 @@
 # misc
 .DS_Store
 *.pem
+docs/
+take-screenshots.mjs
 
 # debug
 npm-debug.log*

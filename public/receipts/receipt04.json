@@ -1,0 +1,20 @@
+{
+  "receiptId": "receipt04",
+  "groundTruth": {
+    "storeName": "Toko ABC",
+    "storeAddress": "Jl. Misterius No. 99",
+    "storePhone": "08123456789",
+    "date": "15/06/2026",
+    "time": "23:59",
+    "receiptNumber": "12345",
+    "items": [
+      { "name": "Barang X", "quantity": 1, "unitPrice": 5000000, "totalPrice": 5000000 }
+    ],
+    "subtotal": 5000000,
+    "tax": 0,
+    "discount": 0,
+    "total": 5000000,
+    "paymentMethod": "TUNAI",
+    "cashier": "Admin"
+  }
+}

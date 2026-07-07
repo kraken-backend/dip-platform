@@ -1,0 +1,11 @@
+{
+  "receiptId": "receipt03",
+  "title": "Fashion Weekend Shopping",
+  "description": "A high-value fashion purchase with weekend promotion discount and credit card installment.",
+  "category": "Fashion",
+  "country": "Indonesia",
+  "currency": "IDR",
+  "scenario": "Weekend promotion with credit installment",
+  "risk": "low",
+  "tags": ["fashion", "credit-card", "installment", "weekend-promo"]
+}

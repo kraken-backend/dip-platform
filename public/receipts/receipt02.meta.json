@@ -1,0 +1,11 @@
+{
+  "receiptId": "receipt02",
+  "title": "Electronics Store Purchase",
+  "description": "A mid-value electronics purchase with debit card payment. Standard retail transaction with accessories.",
+  "category": "Electronics",
+  "country": "Indonesia",
+  "currency": "IDR",
+  "scenario": "Standard retail purchase",
+  "risk": "low",
+  "tags": ["electronics", "debit-card", "accessories"]
+}

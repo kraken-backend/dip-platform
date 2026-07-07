@@ -1,0 +1,10 @@
+export const DEFAULT_THEME = "light";
+export const DEFAULT_DEV_MODE = false;
+export const DEFAULT_LANGUAGE = "en";
+export const DEFAULT_DENSITY = "normal";
+export const DEFAULT_ANIMATIONS = true;
+export const DEFAULT_ACCESSIBILITY = "none";
+export const DEFAULT_DASHBOARD_LAYOUT = "grid";
+export const DEFAULT_EXPERIMENTAL = false;
+export const DEFAULT_NOTIFICATIONS = "all";
+export const DEFAULT_AI_MODE = "assist";
