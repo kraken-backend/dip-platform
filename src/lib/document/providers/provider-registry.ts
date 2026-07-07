@@ -63,3 +63,8 @@ async function simulateDelay(): Promise<void> {
 }
 
 registerProvider(new DemoOcrProvider());
+
+// Tesseract provider is registered lazily via getOrInitTesseractProvider() below.
+// Use normal import to avoid ESLint require() restriction.
+import { TesseractOcrProvider } from "./tesseract-provider";
+registerProvider(new TesseractOcrProvider());

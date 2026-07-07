@@ -1,4 +1,4 @@
-# Summarecon Document Intelligence Platform
+# Document Intelligence Platform
 
 A Document Intelligence Platform POC built for Summarecon Mall, with Receipt Validation as the first use case.
 

@@ -48,6 +48,13 @@ export function validateAiMode(v: unknown): v is AiMode {
   return AI_MODE_VALUES.includes(v as AiMode);
 }
 
+export type OcrProvider = "demo" | "tesseract";
+const OCR_PROVIDER_VALUES = ["demo", "tesseract"] as const;
+
+export function validateOcrProvider(v: unknown): v is OcrProvider {
+  return OCR_PROVIDER_VALUES.includes(v as OcrProvider);
+}
+
 export function getValidatorForType(type: string): ((v: unknown) => boolean) | undefined {
   switch (type) {
     case "boolean": return validateBoolean;

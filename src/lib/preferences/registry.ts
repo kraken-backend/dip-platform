@@ -4,11 +4,13 @@ import {
   DEFAULT_THEME, DEFAULT_DEV_MODE, DEFAULT_LANGUAGE, DEFAULT_DENSITY,
   DEFAULT_ANIMATIONS, DEFAULT_ACCESSIBILITY, DEFAULT_DASHBOARD_LAYOUT,
   DEFAULT_EXPERIMENTAL, DEFAULT_NOTIFICATIONS, DEFAULT_AI_MODE,
+  DEFAULT_OCR_PROVIDER,
 } from "./defaults";
 import {
   validateTheme, validateDeveloperMode, validateBoolean,
   validateLanguage, validateDensity, validateAccessibility,
   validateDashboardLayout, validateNotifications, validateAiMode,
+  validateOcrProvider,
 } from "./validators";
 
 const STORAGE_KEY_MAP: Record<string, string> = {
@@ -133,6 +135,17 @@ const current: PreferenceDefinition[] = [
     persistence: ["localStorage"],
     category: "ai",
     description: "AI processing mode",
+  }),
+
+  define({
+    key: "ocrProvider",
+    type: "enum",
+    defaultValue: DEFAULT_OCR_PROVIDER,
+    validValues: ["demo", "tesseract"] as const,
+    validator: validateOcrProvider,
+    persistence: ["localStorage"],
+    category: "ocr",
+    description: "Active OCR provider backend",
   }),
 ];
 

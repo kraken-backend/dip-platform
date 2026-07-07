@@ -12,6 +12,7 @@ export {
   DEFAULT_THEME, DEFAULT_DEV_MODE, DEFAULT_LANGUAGE, DEFAULT_DENSITY,
   DEFAULT_ANIMATIONS, DEFAULT_ACCESSIBILITY, DEFAULT_DASHBOARD_LAYOUT,
   DEFAULT_EXPERIMENTAL, DEFAULT_NOTIFICATIONS, DEFAULT_AI_MODE,
+  DEFAULT_OCR_PROVIDER,
 } from "./defaults";
 
 // Validators
@@ -19,8 +20,9 @@ export {
   validateTheme, validateDeveloperMode, validateBoolean,
   validateLanguage, validateDensity, validateAccessibility,
   validateDashboardLayout, validateNotifications, validateAiMode,
+  validateOcrProvider,
 } from "./validators";
-export type { Theme, Density, Accessibility, DashboardLayout, Notifications, AiMode } from "./validators";
+export type { Theme, Density, Accessibility, DashboardLayout, Notifications, AiMode, OcrProvider } from "./validators";
 
 // Cookies
 export { setClientCookie, getClientCookie, removeClientCookie, getAllClientCookies } from "./cookies";

@@ -8,3 +8,4 @@ export const DEFAULT_DASHBOARD_LAYOUT = "grid";
 export const DEFAULT_EXPERIMENTAL = false;
 export const DEFAULT_NOTIFICATIONS = "all";
 export const DEFAULT_AI_MODE = "assist";
+export const DEFAULT_OCR_PROVIDER = "demo";
